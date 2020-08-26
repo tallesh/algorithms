@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class Exercise12 {
 
-    public static Subset calculate(List<Double> sequence) {
+    public static Subset overallMaxSubSet(List<Double> sequence) {
 
         Subset maxSubset = new Subset();
         Subset suffixMax = new Subset();
@@ -39,28 +39,28 @@ public class Exercise12 {
     }
 
     public static void main(String[] args) {
-        System.out.println(calculate(Arrays.asList(-0.1,
-                                                   0.5,
-                                                   1.0,
-                                                   -5.0,
-                                                   2.0,
-                                                   0.5,
-                                                   -0.5,
-                                                   8.0,
-                                                   -3.0,
-                                                   -2.0)));
+        System.out.println(overallMaxSubSet(Arrays.asList(-0.1,
+                                                          0.5,
+                                                          1.0,
+                                                          -5.0,
+                                                          2.0,
+                                                          0.5,
+                                                          -0.5,
+                                                          8.0,
+                                                          -3.0,
+                                                          -2.0)));
         System.out.println("Solution " + (1 * -5 * 2 * 0.5 * -0.5 * 8 * -3 * -2));
 
-        System.out.println(calculate(Arrays.asList(-0.1,
-                                                   0.5,
-                                                   1.0,
-                                                   -5.0,
-                                                   2.0,
-                                                   0.5,
-                                                   -5.0e-10,
-                                                   8.0,
-                                                   -3.0,
-                                                   -2.0)));
+        System.out.println(overallMaxSubSet(Arrays.asList(-0.1,
+                                                          0.5,
+                                                          1.0,
+                                                          -5.0,
+                                                          2.0,
+                                                          0.5,
+                                                          -5.0e-10,
+                                                          8.0,
+                                                          -3.0,
+                                                          -2.0)));
         System.out.println("Solution " + (8 * -3 * -2));
     }
 
