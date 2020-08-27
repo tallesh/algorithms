@@ -16,11 +16,11 @@ public class Exercise14 {
 
         Iterator iterator = new Iterator(binaryTree);
         while (iterator.hasNext()) {
-            Vertex v = iterator.next();
+            Vertex vertex = iterator.next();
 
-            Integer[] distancesFromCurrentNode = distances.from(v.currentNode);
-            distances.registerAsOneFarWay(v.linkedToNode, distancesFromCurrentNode);
-            distances.register(v.currentNode, v.linkedToNode, 1);
+            Integer[] distancesFromCurrentNode = distances.from(vertex.currentNode);
+            distances.registerAsOneFarWay(vertex.linkedToNode, distancesFromCurrentNode);
+            distances.register(vertex.currentNode, vertex.linkedToNode, 1);
         }
 
         return distances.get();
